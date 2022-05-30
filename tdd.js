@@ -1,4 +1,6 @@
-  calculate(numberString = '', delimiter = ',') {
+module.exports = class StringCalculator {
+    constructor() { }
+    calculate(numberString = '', delimiter = ',') {
         let sum = 0;
 
         this.convertString(numberString, delimiter).forEach((number) => {
@@ -14,7 +16,8 @@
     }
 
     validateNumber(number) {
-        if(number < 0) {
-            throw Error('negatives not allowed');
+        if (number < 0) {
+            throw Error('negatives not allowed' + number);
         }
     }
+}
